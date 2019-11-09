@@ -1,0 +1,29 @@
+package com.prafful.server;
+
+import com.prafful.data.model.Line;
+import com.prafful.data.repo.LineRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+
+import java.util.Optional;
+
+@Configuration
+public class Server {
+
+    private static Optional<Line> lineData;
+
+    @Autowired
+    private LineRepository lineRepository;
+
+    public void lineData(final String index) {
+        lineData = lineRepository.findById(index);
+    }
+
+    public Optional<Line> getLineData() {
+        return lineData;
+    }
+
+    public void shutdown() {
+        lineRepository.deleteAll();
+    }
+}
