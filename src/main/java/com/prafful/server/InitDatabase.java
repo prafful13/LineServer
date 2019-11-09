@@ -30,13 +30,12 @@ public class InitDatabase {
     @Autowired
     private LineRepository lineRepository;
 
+    /**
+     * Method to fill redis database by reading the file
+     */
     @Bean
-    public boolean fillDatabase() {
+    public int fillDatabase() {
         try {
-            classLoader = MainApplicationClass.class.getClassLoader();
-            System.out.println(classLoader.getResource(".").getFile());
-            log.info("File loaded successfully");
-
             try {
                 inputStream = new FileInputStream(file.getPath());
                 sc = new Scanner(inputStream, "UTF-8");
@@ -55,7 +54,6 @@ public class InitDatabase {
                 System.out.println(totalNumberOfLines);
                 System.out.println(lineRepository.count());
 
-                // note that Scanner suppresses exceptions
                 if (sc.ioException() != null) {
                     throw sc.ioException();
                 }
@@ -72,6 +70,6 @@ public class InitDatabase {
         } catch (final IOException e) {
             log.error("IOException occurred\n", e);
         }
-        return true;
+        return 1;
     }
 }

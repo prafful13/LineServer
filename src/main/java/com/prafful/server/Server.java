@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Optional;
 
+/**
+ * Server class used to interact with the redis database
+ */
 @Configuration
 public class Server {
 

@@ -15,6 +15,12 @@ public class lineDataController {
     @Autowired
     private Server server;
 
+    /**
+     * Controller to return fetched line from the database
+     *
+     * @param index index of line received from the client
+     * @return line data corresponding to the index or a error value with 413 status
+     */
     @RequestMapping("/lines/{index}")
     public ResponseEntity<Line> lineData(@PathVariable("index") final String index) {
         server.lineData(index);
