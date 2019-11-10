@@ -98,6 +98,10 @@ As the size of test_files keep increasing, the pre-processing times shall increa
 ##### How will your system perform with 100 users? 10000 users? 1000000 users?
 With the help of Spring-boot, I have been able to implement a concurrent solution. In the ```ApplicationTest``` class I have written test to check simultaneous users and it works well for more than a million users. (One must run the ```run.sh``` script and use an IDE (Eclipse or IntelliJ) to run the tests)
 ##### What documentation, websites, papers, etc did you consult in doing this assignment?
+https://spring.io/guides/gs/rest-service/
+https://dzone.com/articles/spring-boot-restful-web-service-complete-example
+https://www.baeldung.com/spring-data-redis-tutorial
+StackOverFlow
 ##### What third-party libraries or other tools does the system use? How did you choose each library or framework you used?
 I have used REDIS for reasons mentioned above.
 ##### How long did you spend on this exercise? If you had unlimited more time to spend on this, how would you spend it and how would you prioritize each item?
