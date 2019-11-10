@@ -12,5 +12,6 @@ if ! [ -x "$(command -v redis-server)" ]; then
 fi
 
 mvn clean
+nohup redis-server &
 
 exit 0

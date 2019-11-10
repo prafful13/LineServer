@@ -25,7 +25,6 @@ public class InitDatabase {
     private static String line;
     private static FileInputStream inputStream = null;
     private static Scanner sc = null;
-    private static ClassLoader classLoader;
     private static Line tempLine;
     @Autowired
     private LineRepository lineRepository;

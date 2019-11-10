@@ -6,8 +6,6 @@ then
   exit 0
 fi
 
-nohup redis-server &
-
 mvn spring-boot:run -Dspring-boot.run.arguments=$1
 
 exit 0

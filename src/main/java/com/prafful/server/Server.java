@@ -27,6 +27,8 @@ public class Server {
     }
 
     public void shutdown() {
-        lineRepository.deleteAll();
+        final long size = lineRepository.count();
+        for (int i = 1; i < size; i++) lineRepository.deleteById(Integer.toString(i));
+        if (lineRepository.count() != 0) lineRepository.deleteAll();
     }
 }
