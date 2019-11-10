@@ -73,6 +73,7 @@ sh run.sh <test_file_name>
 ##### ```run.sh <test_file_name>```
 - Boots up our redis-server
 - Boots up our main server for handling REST APIs
+- The test file must be stored in the root directory of the project.
 
 # Using Instructions
 Once both the servers are up, we can either use terminal (curl command) or a web browser or third party apps like Postman to make get requests of the type:
