@@ -2,7 +2,7 @@
 
 if [[ $# -eq 0 ]]
 then
-  echo "Run format: mvn spring-boot:run -Dspring-boot.run.arguments=FileName"
+  echo "Run format: sh run.sh FileName"
   exit 0
 fi
 
