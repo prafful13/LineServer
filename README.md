@@ -84,7 +84,9 @@ On terminal:
 
 To shut down our system, send following request:
 ```curl http://localhost:8080/shutdown```
-This shutsdown both, redis and main servers.
+This shuts down both, redis and main servers.
+Every time our server needs to be closed, it must be done through this API.
+For a rerun, one must run ```build.sh``` first and then ```run.sh```
 
 # Questions
 ##### How does your system work? (if not addressed in comments in source)
@@ -101,7 +103,9 @@ I have used REDIS for reasons mentioned above.
 It took me a day and a half to implement the project completely. If I had unlimited more time I would:
 1. Test for even larger files, finding the bounds of the Redis server.
 2. Documentation can be done better in lines of the organisation's practices using javadoc.
-3. Address critiques mentioned below
+3. A better shutdown process which would not depend on deleting redis database.
+4. Currently, Every time on boot the file is stored in the memory, instead I would implement it in such a manner that previously processed files are reusable directly from the memory.
+4. Address critiques mentioned below
 ##### If you were to critique your code, what would you have to say about it?
 1. I have hardcoded values for server ip and port. One can rather take command line arguments for the same and make system even more configurable.
 3. Implementing testing using mocks for the services as per organisation's practices.
