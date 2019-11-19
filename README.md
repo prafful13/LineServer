@@ -1,4 +1,4 @@
-# Line Server - Salsify
+# Line Server
 ### About the project
 In this project I have implemented a simple network server returning a specific line corresponding to the line index entered by the client.
 #### System Requirements taken into consideration:
